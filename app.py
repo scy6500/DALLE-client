@@ -1,9 +1,9 @@
 import streamlit as st
 import requests
 import base64
+import json
 from PIL import Image
 from io import BytesIO
-import json
 
 
 def send_request(text, num_images):
@@ -24,7 +24,7 @@ st.header("Creating Images from Text")
 
 num_images = st.sidebar.slider("Number of images you want", 1, 4)
 
-text = st.text_input("Text for the image you want to create", "an armchair in the shape of an avocado")
+text = st.text_input("Text for the image you want to create", "snow located on the grand canyon.")
 if st.button("Generate"):
     t = st.empty()
     result = []
